@@ -18,7 +18,7 @@ async def handle_join_request(update: Update, context: ContextTypes.DEFAULT_TYPE
             f"Bonjour {user.first_name} 👋\n\n"
             f"Pour accéder au canal, tu dois d'abord t'inscrire sur notre site :\n\n"
             f"Une fois inscrit, ton accès sera validé automatiquement ✅\n\n"
-            f"Pour être accepter, au moment de l'inscriptions met que tu a 21 ans ou + et une e-mail valide ! 🍓"
+            f"Pour être accepter, au moment de l'inscriptions tu doit avoir obligatoirement plus de 21 ans ou + et mettre une e-mail valide ! 🍓"
         ),
         reply_markup=bouton
     )
