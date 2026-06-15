@@ -12,18 +12,17 @@ async def handle_join_request(update, context):
     user = update.chat_join_request.from_user
 
     bouton = InlineKeyboardMarkup([[
-        InlineKeyboardButton("👉 Cliquez ici", url=LIEN_SITE)
+        InlineKeyboardButton("S'inscrire 🍓", url=LIEN_SITE)
     ]])
 
     await context.bot.send_message(
         chat_id=user.id,
         text=(
             f"Bonjour {user.first_name} 👋\n\n"
-            "Pour accéder au canal, vous devez obligatoirement :\n\n"
-            "🔞 Avoir 21 ans ou plus.\n"
-            "📧 Utiliser une adresse e-mail valide lors de l'inscription.\n\n"
-            "Une fois votre inscription effectuée et validée, votre accès au canal sera accepté automatiquement.\n\n"
-            "Cliquez ci-dessous pour vous inscrire :"
+            "Pour accéder au canal, vous devez :\n\n"
+            "1. Mettre que vous avez 21 ans ou + et une e-mail valide 🍓\n"
+            "2. Une fois fait vous serez automatiquement accepté dans le canal 😈\n\n"
+            "Cliquez ci-dessous pour vous inscrire 👇 :"
         ),
         reply_markup=bouton
     )
