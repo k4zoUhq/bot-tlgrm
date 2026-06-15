@@ -18,11 +18,11 @@ async def handle_join_request(update, context):
     await context.bot.send_message(
         chat_id=user.id,
         text=(
-            f"Bonjour {user.first_name} 👋\n\n"
-            "Pour accéder au canal, vous devez :\n\n"
-            "1. Mettre que vous avez 21 ans ou + et une e-mail valide 🍓\n"
-            "2. Une fois fait vous serez automatiquement accepté dans le canal 😈\n\n"
-            "Cliquez ci-dessous pour vous inscrire 👇 :"
+            f"**Coucou** {user.first_name} 👋\n\n"
+            "**Pour accéder au canal, Tu doit :**\n\n"
+            "1. Mettre que tu à **21 ans ou +** et une **e-mail valide** 🍓\n"
+            "2. Une fois fait **tu serez accepté automatiquement** par le bot dans le canal 😈\n\n"
+            "Clique ci-dessous pour t'inscrire 👇"
         ),
         reply_markup=bouton
     )
