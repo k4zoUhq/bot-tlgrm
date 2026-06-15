@@ -27,4 +27,5 @@ app = Application.builder().token(BOT_TOKEN).build()
 app.add_handler(ChatJoinRequestHandler(handle_join_request))
 
 print("Bot démarré !")
-app.run_polling()
+import asyncio
+asyncio.run(app.run_polling())
