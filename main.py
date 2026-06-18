@@ -31,4 +31,4 @@ if __name__ == "__main__":
     app = Application.builder().token(BOT_TOKEN).build()
     app.add_handler(ChatJoinRequestHandler(handle_join_request))
     print("Bot démarré !")
-    app.run_polling()
+    app.run_polling(
