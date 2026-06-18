@@ -25,7 +25,8 @@ async def handle_join_request(update, context):
             f"Coucou {user.first_name} 👋\n\n"
             "Si toi aussi tu veux devenir VIP et avoir accès a plus de 21.500 vidéos / photos 🍓 pour seulement 1.04€ -> https://vipleak.cc/ayaro\n\n"
             '1. <b><a href="https://t.me/retourvip">RETOURS VIP 🌟</a></b>\n'
-            '2. <b><a href="https://t.me/+GR2avjK42sE0NDQ8">CANAL POST 😈</a></b>'
+            '2. <b><a href="https://t.me/+GR2avjK42sE0NDQ8">CANAL POST 😈</a></b>\n'
+            '3. <b><a href="https://t.me/+cnmT8GPtICJjOGNk">CANAL PRINCIPAL 🍡</a></b>'
         ),
         parse_mode="HTML"
     )
@@ -37,4 +38,3 @@ if __name__ == "__main__":
 
     print("Bot démarré !")
     app.run_polling()
-
