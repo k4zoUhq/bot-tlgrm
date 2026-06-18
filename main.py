@@ -1,30 +1,23 @@
 import os
 import logging
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, ChatJoinRequestHandler
 
 logging.basicConfig(level=logging.INFO)
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
-LIEN_SITE = "https://nude-snap.cc/join"
 
 async def handle_join_request(update, context):
     user = update.chat_join_request.from_user
-
-    bouton = InlineKeyboardMarkup([[
-        InlineKeyboardButton("S'inscrire 🍓", url=LIEN_SITE)
-    ]])
 
     await context.bot.send_message(
         chat_id=user.id,
         text=(
             f"Coucou {user.first_name} 👋\n\n"
-            "Pour accéder au canal, tu dois :\n\n"
-            "1. Au moment de l'inscriptions mettre que tu à 21 ans ou plus et mettre une adresse email valide 🍓\n"
-            "2. Une fois l'inscription terminée, tu seras accepté automatiquement par le bot dans le canal 😈\n\n"
-            "Clique ci-dessous pour t'inscrire 👇"
+            "Si toi aussi tu veux devenir VIP et avoir accès a plus de 21.500 vidéos / photos 🍓 pour seulement 1.04€ -> https://vipleak.cc/ayaro\n\n"
+            '1. <b><a href="https://t.me/retourvip">RETOURS VIP 🌟</a></b>\n'
+            '2. <b><a href="https://t.me/+GR2avjK42sE0NDQ8">CANAL POST 😈</a></b>'
         ),
-        reply_markup=bouton
+        parse_mode="HTML"
     )
 
 if __name__ == "__main__":
